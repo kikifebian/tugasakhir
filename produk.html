@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - BIAN STORE</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('foto/game2.jpg'); /* Ganti path_to_your_image.jpg dengan path gambar Anda */
+            background-size: cover; /* Agar gambar latar belakang menutupi seluruh area */
+            background-repeat: no-repeat; /* Hindari pengulangan gambar */
+            overflow: hidden; /* Agar teks di latar belakang tidak muncul di luar area viewport */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .title {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .product-list {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .product-list h2 {
+            color: #fff700;
+        }
+
+        .product-list ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-list li {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-list li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .product-list li a:hover {
+            color: #555;
+        }
+
+        .product-details {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .product-details h3 {
+            color: #ffffff;
+        }
+
+        .product-details p {
+            color: #ffffff;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="title">BIANSTORE</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="produk.html">PRODUK</a></li>
+            <li><a href="tentang.html">TENTANG</a></li>
+            <li><a href="profil.html">PROFILE</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="product-list">
+    <h2>Daftar Produk</h2>
+    <ul>
+        <li><a href="#" onclick="showProduct('freefire')">Top Up Free Fire</a></li>
+        <li><a href="#" onclick="showProduct('bigo')">Top Up Bigo Live</a></li>
+        <li><a href="#" onclick="showProduct('shells')">Garena Shells</a></li>
+        <li><a href="#" onclick="showProduct('genshin')">Genshin Impact</a></li>
+        <li><a href="#" onclick="showProduct('higgs')">Higgs Domino</a></li>
+        <li><a href="#" onclick="showProduct('followers')">Coming Soon!</a></li>
+        <li><a href="#" onclick="showProduct('iqiyi')">IQIYI</a></li>
+        <li><a href="#" onclick="showProduct('mobilelegends')">Top Up Mobile Legends</a></li>
+        <li><a href="#" onclick="showProduct('nimotv')">Nimo TV</a></li>
+        <li><a href="#" onclick="showProduct('googleplay')">Voucher Google Play</a></li>
+        <li><a href="#" onclick="showProduct('pubg')">Top Up PUBG Mobile</a></li>
+        <li><a href="#" onclick="showProduct('spotify')">Spotify Premium</a></li>
+        <li><a href="#" onclick="showProduct('valorant')">Top Up Valorant</a></li>
+        <li><a href="#" onclick="showProduct('vidio')">Top Up Vidio Premium</a></li>
+        <li><a href="#" onclick="showProduct('viu')">Top Up VIU</a></li>
+    </ul>
+</div>
+
+<!-- Isi Harga untuk Setiap Produk -->
+<div class="product-details" id="product-details">
+    <!-- Ini akan diisi secara dinamis oleh JavaScript -->
+</div>
+
+<script>
+    function showProduct(product) {
+        var details = document.getElementById('product-details');
+        var content = '';
+
+        switch (product) {
+            case 'freefire':
+                content = '<div id="harga-freefire">' +
+                    '<img src="foto/ff.png" alt="Top Up Free Fire">' +
+                    '<h3>Top Up Free Fire</h3>' +
+                    '<p>Harga: <span id="price-freefire">Rp 10.000</span></p>' +
+                    '</div>';
+                break;
+            case 'bigo':
+                content = '<div id="harga-bigo">' +
+                    '<img src="foto/bigo_live.jpg" alt="Top Up Bigo Live">' +
+                    '<h3>Top Up Bigo Live</h3>' +
+                    '<p>Harga: <span id="price-bigo">Rp 20.000</span></p>' +
+                    '</div>';
+                break;
+            case 'shells':
+                content = '<div id="harga-shells">' +
+                    '<img src="foto/garena_shells.jpg" alt="Garena Shells">' +
+                    '<h3>Garena Shells</h3>' +
+                    '<p>Harga: <span id="price-shells">Rp 50.000</span></p>' +
+                    '</div>';
+                break;
+            case 'genshin':
+                content = '<div id="harga-genshin">' +
+                    '<img src="foto/GenshinImpact.jpg" alt="Genshin Impact">' +
+                    '<h3>Genshin Impact</h3>' +
+                    '<p>Harga: <span id="price-genshin">Rp 100.000</span></p>' +
+                    '</div>';
+                break;
+            case 'higgs':
+                content = '<div id="harga-higgs">' +
+                    '<img src="foto/higgs_domino.jpg" alt="Higgs Domino">' +
+                    '<h3>Higgs Domino</h3>' +
+                    '<p>Harga: <span id="price-higgs">Rp 25.000</span></p>' +
+                    '</div>';
+                break;
+            case 'followers':
+                content = '<div id="harga-followers">' +
+                    '<h3>Coming Soon!</h3>' +
+                    '<p><span id="price-followers">Stay tune for new products!</span></p>' +
+                    '</div>';
+                break;
+            case 'iqiyi':
+                content = '<div id="harga-iqiyi">' +
+                    '<img src="foto/iqiyi.png" alt="iqiyi">' +
+                    '<h3>IQIYI</h3>' +
+                    '<p>Harga: <span id="price-iqiyi">Rp 15.000</span></p>' +
+                    '</div>';
+                break;
+            case 'mobilelegends':
+                content = '<div id="harga-mobilelegends">' +
+                    '<img src="foto/mlbb.jpg" alt="mlbb">' +
+                    '<h3>Top Up Mobile Legends</h3>' +
+                    '<p>Harga: <span id="price-mobilelegends">Rp 30.000</span></p>' +
+                    '</div>';
+                break;
+            case 'nimotv':
+                content = '<div id="harga-nimotv">' +
+                    '<img src="foto/NimoTV.png" alt="nimo">' +
+                    '<h3>Nimo TV</h3>' +
+                    '<p>Harga: <span id="price-nimotv">Rp 15.000</span></p>' +
+                    '</div>';
+                break;
+            case 'googleplay':
+                content = '<div id="harga-googleplay">' +
+                    '<img src="foto/ps.jpg" alt="Play Store">' +
+                    '<h3>Voucher Google Play</h3>' +
+                    '<p>Harga: <span id="price-googleplay">Rp 100.000</span></p>' +
+                    '</div>';
+                break;
+            case 'pubg':
+                content = '<div id="harga-pubg">' +
+                    '<img src="foto/pubgm.jpg" alt="pubgm">' +
+                    '<h3>Top Up PUBG Mobile</h3>' +
+                    '<p>Harga: <span id="price-pubg">Rp 40.000</span></p>' +
+                    '</div>';
+                break;
+            case 'spotify':
+                content = '<div id="harga-spotify">' +
+                    '<img src="foto/spotify.png" alt="spotify">' +
+                    '<h3>Spotify Premium</h3>' +
+                    '<p>Harga: <span id="price-spotify">Rp 50.000</span></p>' +
+                    '</div>';
+                break;
+            case 'valorant':
+                content = '<div id="harga-valorant">' +
+                    '<img src="foto/valorant.jpg" alt="valorant">' +
+                    '<h3>Top Up Valorant</h3>' +
+                    '<p>Harga: <span id="price-valorant">Rp 60.000</span></p>' +
+                    '</div>';
+                break;
+            case 'vidio':
+                content = '<div id="harga-vidio">' +
+                    '<img src="foto/vidioo.jpeg" alt="vidio">' +
+                    '<h3>Top Up Vidio Premium</h3>' +
+                    '<p>Harga: <span id="price-vidio">Rp 25.000</span></p>' +
+                    '</div>';
+                break;
+            case 'viu':
+                content = '<div id="harga-viu">' +
+                    '<img src="foto/viu.jpg" alt="Viu">' +
+                    '<h3>Top Up VIU</h3>' +
+                    '<p>Harga: <span id="price-viu">Rp 20.000</span></p>' +
+                    '</div>';
+                break;
+            default:
+                content = '<p>Produk tidak ditemukan</p>';
+        }
+
+        details.innerHTML = content;
+    }
+</script>
+</body>
+</html>

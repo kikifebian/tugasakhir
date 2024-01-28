@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIAN STORE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('foto/game.jpg'); /* Ganti path_to_your_image.jpg dengan path gambar Anda */
+            background-size: cover; /* Agar gambar latar belakang menutupi seluruh area */
+            background-repeat: no-repeat; /* Hindari pengulangan gambar */
+            overflow: hidden; /* Agar teks di latar belakang tidak muncul di luar area viewport */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .title {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Tampilan dan animasi running text di latar belakang */
+        #background-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: #fff;
+            white-space: nowrap; /* Agar teks tidak pindah ke baris baru */
+            animation: slideText 10s linear infinite; /* Animasi slide dari kiri ke kanan */
+        }
+
+        /* Keyframes untuk animasi slide text */
+        @keyframes slideText {
+            0% {
+                left: 100%; /* Mulai dari luar layar sebelah kanan */
+            }
+            100% {
+                left: -100%; /* Pindah ke luar layar sebelah kiri */
+            }
+        }
+
+        .product {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .product-link {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .product-link img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-title {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .product-title:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="title">BIANSTORE</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">BERANDA</a></li>
+                <li><a href="produk.html">PRODUK</a></li>
+                <li><a href="tentang.html">TENTANG</a></li>
+                <li><a href="profil.html">PROFILE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tampilkan running text di latar belakang -->
+    <div id="background-text">Selamat datang di Bian Store!</div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="product">
+        <!-- ... (bagian produk tetap sama) ... -->
+    </div>
+</body>
+</html>
